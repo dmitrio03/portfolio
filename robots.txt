@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://dmitrio03.github.io/portfolio/sitemap.xml
+Sitemap: https://dmitrio03.github.io/sitemap.xml

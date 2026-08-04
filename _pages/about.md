@@ -24,4 +24,4 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Permanently curious finance major, turned accountant/financial analyst/controller. I studied Finance & Economics at John Cabot University in Rome, which set off a decade-plus habit of chasing complexity across borders and balance sheets. These days I spend my off-hours deep in data science and machine learning, building out models, dashboards, and small tools just to keep learning — I even run a local LLM at home to tinker with. Always looking for new solutions. Longtime lurker of [r/espresso](https://www.reddit.com/r/espresso).
+Permanently curious finance major, turned accountant/financial analyst/controller. I studied Finance and Economics at John Cabot University in Rome, which set off a decade-plus habit of chasing complexity across borders and balance sheets. These days I spend my off-hours deep in data science and machine learning, building out models, dashboards, and small tools just to keep learning — I even run a local LLM at home to tinker with. Always looking for new solutions. Longtime lurker of [r/espresso](https://www.reddit.com/r/espresso).

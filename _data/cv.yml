@@ -34,10 +34,10 @@ cv:
         highlights:
           - Created machine learning and data science portfolio.
 
-      - institution: ""
+      - institution: Additional Courses
         location: Remote
         area: ""
-        studyType: Additional Courses
+        studyType: ""
         start_date: 
         end_date: 
         courses:
@@ -52,13 +52,24 @@ cv:
         description: Education Software Company
         position: Senior Accountant
         location: Remote
-        start_date: 2025
-        end_date: 2026
+        start_date: 2024
+        end_date: 2025
         summary: Managed month-end close, reconciliations, and revenue recognition for \$29M+ in annual contract and grant revenue across multiple streams, including time-and-effort contracts, licensing agreements, and performance-based deliverables under ASC 606, ensuring accurate allocation and timing of revenue recognition.
         highlights:
-          - Administered fund accounting for &#36;4.6M in federal grant expenditures across multiple programs (EIR, IES, and non-prime grants), ensuring compliance with CFR 200 and proper tracking of &#36;2.1M in subrecipient disbursements. 
-          - Managed complex deferred revenue tracking of \$5.4M across 39 customer contracts, ensuring proper recognition timing for licensing, performance reporting, and time-and-effort based deliverables while maintaining detailed contract liability schedules.
-          - Standardized asset acquisition processes by meeting with the development team quarterly and preparing software capitalization schedules using time-and-effort methodologies and direct cost allocation principles.
+          - Executed comprehensive receivables reconciliation for $2.4M in contract balances across four distinct revenue categories (patient accounts, 340B pharmacy, capitation, and shared savings), implementing aging analysis controls and improving collection patterns for medically underserved populations.
+          - Led ERP system enhancements including dimension restructuring to support functional expense allocation across program service lines, donor fund tracking for restricted contributions, and CRM integration to improve grant revenue monitoring for $6M+ in federal awards.
+
+      - company: Various
+        description: Nonprofit Healthcare Providers
+        position: Accounting Consultant
+        location: Remote
+        start_date: 2024
+        end_date: 2025
+        summary: Partnered with Finance Executives on audit preparation and financial statement reviews, analyzing operating performance across program services and ensuring proper classification of restricted vs. unrestricted net assets.
+        highlights:
+          - Developed sophisticated Power BI-based forecasts including dynamic budgets, burn rate projections with sensitivity analysis, and interactive dashboards linking field office documentation to headquarters reporting, supporting country directors' strategic planning.
+          - Prepared complex donor financial reports including SF-425 Federal Financial Reports, quarterly pipeline reports, final financial closeout packages, budget modification requests, and no-cost extension justifications while training 10+ regional staff on Excel financial modeling and project budget management.
+
 
       - company: Heartland Alliance International
         description: International Humanitarian NGO
@@ -82,34 +93,48 @@ cv:
           - Developed sophisticated Power BI-based forecasts including dynamic budgets, burn rate projections with sensitivity analysis, and interactive dashboards linking field office documentation to headquarters reporting, supporting country directors' strategic planning.
           - Prepared complex donor financial reports including SF-425 Federal Financial Reports, quarterly pipeline reports, final financial closeout packages, budget modification requests, and no-cost extension justifications while training 10+ regional staff on Excel financial modeling and project budget management.
 
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
+      - company: City of Chicago, Department of Public Health
+        description: Municipal Government Health Department
+        position: Finance Officer
+        location: Chicago, IL
+        start_date: 2020
+        end_date: 2021
+        highlights:
+          - Streamlined invoice processing and payment operations during COVID-19 that accelerated invoice processing by 40%, managing surge in expenditure claims while reducing processing time and maintaining compliance.
+          - Conducted quarterly budget planning sessions with delegate agencies, establishing revenue projections and expenditure targets aligned with grant periods, identifying budget variances requiring corrective action plans, and ensuring alignment between programmatic deliverables and financial resources throughout the fiscal year.
+          - Developed standardized financial protocols and documentation systems for Health Department revenue tracking, establishing correspondence procedures, creating centralized recordkeeping infrastructure for grant and contract files, and improving audit readiness for federal and state funding sources.
 
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
+
+      - company: Earlier Experience
+        position: ""
+        location: Chicago, IL
+        start_date: 2015
+        end_date: 2020
+        highlights:
+          - <strong>Center for Economic Progress (Tax Assistance)</strong> - Processed accounts payable, payroll, and cash receipts; administered and recorded employee benefits; performed month-end close procedures; and prepared year-end tax documents (W-2s, 1099s) and adjusting journal entries.
+          - <strong>The Night Ministry (Public Housing Nonprofit)</strong> - Managed 16 government grant budgets across six programs; redesigned payroll allocation systems spanning five departments; built customized Great Plains database linking expenses to state and local grant vouchers; coordinated government and private funding strategies with Development team.
+          - <strong>Deborah's Place (Public Housing)</strong> - Served as Accountant managing general ledger, cash management, and government grant accounting for $9M organization; supervised Accounts Payable staff; conducted monthly variance analysis and grant forecasting; booked revenue for 12 government grants across three entities; and supported single audit preparation and government monitoring.
 
     Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
-        highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
+      - company: VITA/TCE Tax Assistance Volunteer
+        position: Tax Preparer and Quality Assurance
+        location: Chicago, IL
+        start_date: 2013
+        end_date: 2017
+        summary: Lead tax preparation for Spanish-speaking, low-income participants, checking each preparation before filing for errors.
+        highlights: ""
 
     Skills:
-      - name: Physics
+      - name: Accounting
         level: Master
         icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+        keywords: "Excel Power User, VBA, macros, PivotTables, Fund Accounting, Palantir/Foundry, Blackbaud (Financial Edge), Business Central, QuickBooks, Great Plains, Sage Intacct, SAP, Concur, Ramp, Bill.com, Salesforce, Solver"
+
+      - name: Data Science
+        level: Intermediate
+        icon: fa-solid fa-laptop
+        keywords: "Power BI, Python, Pandas, Tableau, SQL, Postgres, data discovery, EDA, Claude Code, visualization, KPIs"
+
 
     Languages:
       - name: English
@@ -128,15 +153,6 @@ cv:
         date: 2021-03-01
         issuer: Chegg Skills
         icon: fa-solid fa-tag
-
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
 
     References:
       - name: Available upon request

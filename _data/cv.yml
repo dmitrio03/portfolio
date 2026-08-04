@@ -20,7 +20,7 @@ cv:
         area: Finance & Economics
         studyType: B.A.
         start_date: 
-        end_date: 2012
+        end_date: 
         score: ""
         courses:
           - <strong>Federal Income Tax</strong> - principles of Internal Revenue Code - <strong>2017</strong>
@@ -34,9 +34,21 @@ cv:
         area: Data Science Flex
         studyType: Technical Course
         start_date: 
-        end_date: 2021
+        end_date: 
         highlights:
           - Created machine learning and data science portfolio.
+
+      - institution: ""
+        location: Remote
+        area: ""
+        studyType: Additional Courses
+        start_date: 
+        end_date: 
+        courses:
+          - <strong>Federal Income Tax</strong> - principles of Internal Revenue Code - <strong>2017</strong>
+          - <strong>Federal Income Tax</strong> - principles of Internal Revenue Code - <strong>2017</strong>
+          - <strong>Cost Accounting</strong> - factory operations, cost finding for order/processes, overhead allocation - <strong>2017</strong>
+          - <strong>Internal Auditing</strong> - assurance, risk management and governance - <strong>2026</strong>
 
 
 

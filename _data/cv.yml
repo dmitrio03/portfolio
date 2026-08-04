@@ -29,7 +29,7 @@ cv:
           - _Internal Auditing_ - assurance, risk management and governance - _2026_
 
       - institution: Chegg Skills
-        location: 
+        location: Remote
         area: Data Science Flex
         studyType: Technical Course
         start_date: 
@@ -39,30 +39,36 @@ cv:
 
     Experience:
       - company: Education Analytics
+        description: Education Software Company
         position: Senior Accountant
         location: Remote
         start_date: 2025
         end_date: 2026
-        summary: Managed month-end close, reconciliations, and revenue recognition for $29M+ in annual contract and grant revenue across multiple streams, including time-and-effort contracts, licensing agreements, and performance-based deliverables under ASC 606, ensuring accurate allocation and timing of revenue recognition.
+        summary: Managed month-end close, reconciliations, and revenue recognition for \$29M+ in annual contract and grant revenue across multiple streams, including time-and-effort contracts, licensing agreements, and performance-based deliverables under ASC 606, ensuring accurate allocation and timing of revenue recognition.
         highlights:
-          - Administered fund accounting for $4.6M in federal grant expenditures across multiple programs (EIR, IES, and non-prime grants), ensuring compliance with CFR 200 and proper tracking of $2.1M in subrecipient disbursements. 
+          - Administered fund accounting for \$4.6M in federal grant expenditures across multiple programs (EIR, IES, and non-prime grants), ensuring compliance with CFR 200 and proper tracking of \$2.1M in subrecipient disbursements. 
           - Managed complex deferred revenue tracking of $5.4M across 39 customer contracts, ensuring proper recognition timing for licensing, performance reporting, and time-and-effort based deliverables while maintaining detailed contract liability schedules.
           - Standardized asset acquisition processes by meeting with the development team quarterly and preparing software capitalization schedules using time-and-effort methodologies and direct cost allocation principles.
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+      - company: Heartland Alliance International
+        description: International Humanitarian NGO
+        position: Controller
+        location: Remote
+        start_date: 2022
+        end_date: 2024
+        summary: Directed monthly financial close and reporting for $20M international nonprofit entity operating across Latin America, Caribbean, Middle East, and Africa, producing consolidated financial statements, treasury analyses, and executive dashboards for board treasurer and leadership team.
         highlights:
-          - Description 1.
-          - Description 2.
-
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
+          - Supervised finance team of four analysts overseeing multi-country operations across six currencies, reviewing all general ledger entries, donor invoices, accounts payable transactions, and ensuring compliance with federal grant requirements totaling $10.2M in USAID and State Department awards.
+          - Led financial systems transition during organizational restructuring, managing ERP migration, payroll system conversion, and paperless AP implementation as entity separated from parent organization, ensuring accurate historical balances and maintaining operational continuity throughout the wind-down process.
+          - Implemented financial controls to address audit findings and complex revenue recognition issues, including proper treatment of deferred revenue, grant advances, period-of-performance compliance, and allowable costs to ensure GAAP compliance and meet Uniform Guidance requirements across international operations.
+        position: Financial Analyst - Latin America/Caribbean Region
+        location: Remote
+        start_date: 2021
+        end_date: 2022
+        summary: Conducted comprehensive budget-to-actual analysis for $8.6M in grants across Colombia and Dominican Republic, identifying variances, ensuring compliance with cost-share requirements, and submitting budget modifications as needed.
+        highlights:
+          - Developed sophisticated Power BI-based forecasts including dynamic budgets, burn rate projections with sensitivity analysis, and interactive dashboards linking field office documentation to headquarters reporting, supporting country directors' strategic planning.
+          - Prepared complex donor financial reports including SF-425 Federal Financial Reports, quarterly pipeline reports, final financial closeout packages, budget modification requests, and no-cost extension justifications while training 10+ regional staff on Excel financial modeling and project budget management.
 
       - company: Karl-Ferdinand University
         position: Professor of Theoretical Physics
@@ -87,47 +93,6 @@ cv:
           - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
           - "Men of the year 2014 by Time magazine"
 
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
-
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
-
-    Publications:
-      - title: Zur Elektrodynamik bewegter Körper
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
-
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
-
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
-
     Skills:
       - name: Physics
         level: Master
@@ -135,32 +100,22 @@ cv:
         keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
 
     Languages:
-      - name: German
+      - name: English
         summary: "Native speaker"
 
-      - name: English
+      - name: Spanish
         summary: "Fluent"
-
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+        
+      - name: Portuguese
+        summary: "Intermediate"
+        
 
     Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
 
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
+      - name: Data Science Flex
+        date: 2021-03-01
+        issuer: Chegg Skills
         icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
 
     Projects:
       - name: Quantum Computing
@@ -172,10 +127,5 @@ cv:
         end_date: 2018-01-01
 
     References:
-      - name: Professor John Doe
+      - name: Available upon request
         icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
-
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.

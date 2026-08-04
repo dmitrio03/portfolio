@@ -23,6 +23,10 @@ cv:
         end_date: 2012
         score: ""
         courses: ""
+        additional courses:
+          - _Federal Income Tax_ - principles of Internal Revenue Code - _2017_
+          - _Cost Accounting_ - factory operations, cost finding for order/processes, overhead allocation - _2017_
+          - _Internal Auditing_ - assurance, risk management and governance - _2026_
 
       - institution: Chegg Skills
         location: Remote
@@ -33,10 +37,7 @@ cv:
         highlights:
           - Created machine learning and data science portfolio.
 
-      - additional courses:
-          - _Federal Income Tax_ - principles of Internal Revenue Code - _2017_
-          - _Cost Accounting_ - factory operations, cost finding for order/processes, overhead allocation - _2017_
-          - _Internal Auditing_ - assurance, risk management and governance - _2026_
+
 
     Experience:
       - company: Education Analytics

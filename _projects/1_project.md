@@ -2,7 +2,7 @@
 layout: page
 title: Fake, Inc. — A Complete Nonprofit Financial Model
 description: A full-year, GAAP-compliant fictional accounting workbook built to demonstrate how I think, reconcile, and communicate as an accountant
-img: assets/img/fake-inc-cover.png
+img: assets/img/Fake, Inc thumbnail.jpg
 importance: 1
 category: Excel
 related_publications: false

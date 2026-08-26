@@ -66,7 +66,7 @@ In a **board meeting**, I'd open on the Cash Flow Forecast and Variance tabs —
 This project is best explored directly. Every tab, every formula, every reconciliation is real and functional.
 
 <div class="text-center mt-3">
-    <a href="{{ '/assets/Fake-Inc-FY2026.xlsx' | relative_url }}" class="btn btn-outline-primary" role="button">Download the full workbook (.xlsx)</a>
+    <a href="{{ 'assets/Fake, Inc - FY2026.xlsx' | relative_url }}" class="btn btn-outline-primary" role="button">Download the full workbook (.xlsx)</a>
 </div>
 
 **A note on the data:** every employee name, salary, grant, vendor, and dollar figure in this workbook is fictional, built for demonstration purposes only.

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Balance Sheet Variance Analysis — Python
+title: Balance Sheet Variance Analysis - Python
 description: A month-over-month statistical variance analysis of every balance sheet account, built in pandas and Plotly on the Fake, Inc. general ledger
 img: assets/img/variance-analysis-cover.png
 importance: 2

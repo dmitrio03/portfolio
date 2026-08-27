@@ -44,6 +44,10 @@ The notebook pulls the same Allocated Transactions and Chart of Accounts data be
 
 Fifteen flagged account-months out of 234 total, and every one traces to a real, explainable event: an $18,500 equipment purchase, a $40,000 draw on a note payable, a $70,000 restricted grant recognized mid-year, a $25,000 deferred revenue release. That's the analysis working correctly — catching genuine events, not noise.
 
+## The Potential
+
+The potential for this kind of code is that it can flag when balance sheet accounts change. It can also go backwards, tracing when certain pledges are made, for example, and what can be potentially written off as uncollectible or bad debt. For accountants, this tool can help us trace back liability accounts that may have been building large balances without being properly expensed, or lowered, over time. It's a great tool for catching problems and keeping a clean balance sheet.
+
 ## View the code directly
 
 <div class="text-center mt-3">

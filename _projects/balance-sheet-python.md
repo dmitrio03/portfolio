@@ -47,7 +47,7 @@ This kind of code can flag when balance sheet accounts change unexpectedly. It c
 ## View the code directly
 
 <div class="text-center mt-3">
-    <a href="{{ '/assets/jupyter/balance_sheet_variance_analysis.ipynb' | relative_url }}" class="btn btn-outline-primary" role="button">Download the notebook</a>
+    <a href="{{ '/assets/jupyter/balance_sheet_variance_analysis.ipynb.txt' | relative_url }}" class="btn btn-outline-primary" role="button">Download the notebook</a>
 </div>
 
 Note: this analysis runs on the same fictional dataset as the Fake, Inc. Excel model. Every transaction is invented for demonstration purposes.

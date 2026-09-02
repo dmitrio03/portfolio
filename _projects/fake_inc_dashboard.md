@@ -8,11 +8,11 @@ category: PowerBI
 related_publications: false
 ---
 
-Spreadsheets and notebooks are built for depth. A board or operations meeting needs something different: click a filter, see the picture change, move on. This dashboard is the same Fake, Inc. general ledger data behind the Excel model and the Python variance analysis, rebuilt in Power BI to show that same information the way a board or program lead would actually want to explore it live in a meeting.
+I find myself often wanting to share something broadly--I want anyone to be able to open the thing I make and intuitively understand it. Spreadsheets do that, because everyone has Excel, but the notebook is built for depth. Non-financial people need to be able to click a filter, see the picture change, and get what's happening. Power BI comes with most Microsoft packages, so most employees will be able to see the visualizations because it's available in their suite of programs. This dashboard is the same Fake, Inc. general ledger data behind the Excel model and the Python variance analysis.
 
 ## What it shows
 
-A revenue and expense trend line across all cost centers, with a slicer that filters down to Admin, Programs, or any individual cost center. Below that, a budget-versus-actual comparison by fiscal quarter, along with the variance between the two, so it is immediate whether a quarter came in over or under plan and by how much.
+A revenue and expense trend line across all cost centers, with a slicer that filters down to Admin, Programs, or any individual cost center. Below that, a budget-versus-actual comparison by fiscal quarter, along with the variance between the two, so it is immediate whether a quarter came in over or under plan and by how much. This is much more extensive than an Excel chart, which is not interactive--this chart would take the place of 12 different charts, across all cost centers and the programs and administrative departments.
 
 Since the underlying fiscal year runs July through June rather than the calendar year, the quarters are calculated to match: Q1 is July through September, Q2 is October through December, Q3 is January through March, and Q4 is April through June.
 
@@ -29,11 +29,7 @@ Since the underlying fiscal year runs July through June rather than the calendar
 
 ## How it was built
 
-The report connects directly to the same Allocated Transactions, Chart of Accounts, and Cost Centers data used throughout the Fake, Inc. model, along with the Budget Data used for the comparison. Account Type and Cost Center Type flow through relationships built in Power BI's data model, so a single slicer selection filters every visual on the page at once.
-
-## A note on hosting
-
-Power BI's live, interactive embedding requires a Power BI Pro subscription, which is not included in a standard Microsoft 365 plan. Rather than pay an ongoing fee to keep a single portfolio page live, the video above shows the actual dashboard in use, and the working file is available to open directly in Power BI Desktop, which is free.
+The report connects directly to the same general ledger transactions, Chart of Accounts, and Cost Centers data used throughout the Fake, Inc. model, along with the Budget Data used for the comparison. Relationships were made to connect all disparate data with key columns, which were the same across 
 
 ## View the file directly
 

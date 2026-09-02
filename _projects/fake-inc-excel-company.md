@@ -8,13 +8,13 @@ category: Excel
 related_publications: false
 ---
 
-Numbers on a page don't tell you much on their own. What tells you something is whether the person behind them can walk into a room — a board meeting, a one-on-one with a CEO, an audit fieldwork session — and make those numbers make sense to everyone at the table, not just the accountants.
+Numbers on a page don't tell you much on their own. What tells you something is whether the person behind them can walk into a room--a board meeting, a one-on-one with a CEO, an audit fieldwork session--and make those numbers make sense to everyone at the table, not just the accountants.
 
-This project is a complete, self-consistent set of books for **Fake, Inc.**, a fictional international development nonprofit. Every employee, salary, grant, vendor, and dollar figure is invented — but the mechanics underneath are real: GAAP-compliant depreciation schedules, PTO accrual tied to actual headcount, restricted vs. unrestricted net asset tracking, indirect cost allocation, and a Trial Balance that ties to the penny.
+This project is a complete, self-consistent set of books for **Fake, Inc.**, a fictional international development nonprofit. Every employee, salary, grant, vendor, and dollar figure is invented--but the mechanics underneath are real. There are GAAP-compliant depreciation schedules, PTO accruals tied to actual employee headcount, restricted vs. unrestricted net asset tracking, indirect cost allocation, and a Trial Balance that adheres to the accounting equation.
 
 ## Cash Flow Forecast
 
-A twelve-month rolling cash forecast built from known recurring expenses and expected revenue — hover over any point for the exact ending balance.
+A twelve-month rolling cash forecast built from known recurring expenses and expected revenue--hover over any point for the exact ending balance.
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
@@ -59,7 +59,9 @@ The same comparison, viewed by program instead of department — this is where o
 
 ## How I'd use this in the room
 
-In a **board meeting**, I'd open on the Cash Flow Forecast and Variance tabs — board members want to know if the organization is going to run out of money, and whether it's spending what it said it would. In a **1:1 with a CEO or COO**, I'd go deeper into Variance by Program, since that's where operational decisions live. With an **auditor**, I'd start at the Trial Balance and walk backward: every balance traces to a schedule, every schedule traces to a documented assumption, and every assumption is labeled as exactly that — an assumption, not a fact dressed up as one.
+The Cash Flow Forecast tab is of interest to board members want to know if the organization is going to run out of money, specifically. Some organizations that are on shaky ground need to know how much runway they have, how many months of cash they have to pay the standard bills, and whether or not a line of credit is a good option to use at the moment. This is the tool for them. It's a tool that is limited to cash and operating activities.
+
+Other tools that management will find useful are variance reports, in broad and granular form--which basically inform whether the company is spending what it said it would. In a **1:1 with a CEO or COO**, I'd go deeper into Variance by Program, since that's where full administrative expenses live, compared to the full program-line expenditure. For a program manager who oversees the (fictional) Sub-Saharan Africa program, I would share the Variance by Cost Center report, which shows line-by-line differentials between actual spending and what was budgeted for that particular program. With an **auditor**, I'd start at the Trial Balance and walk backward: every balance traces to a schedule, every schedule traces to a documented assumption, and every assumption is labeled as exactly that — an assumption, not a fact dressed up as one.
 
 ## Explore the full workbook
 

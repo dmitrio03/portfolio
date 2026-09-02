@@ -2,7 +2,7 @@
 layout: page
 title: "Financial Dashboard - Power BI"
 description: "An interactive Power BI dashboard built on Fake, Inc.'s general ledger, comparing budget to actual by fiscal quarter across cost centers"
-img: assets/img/powerbi-cover.png
+img: "assets/img/Fake, Inc dashboard thumbnail.jpg"
 importance: 3
 category: PowerBI
 related_publications: false

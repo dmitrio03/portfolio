@@ -8,13 +8,13 @@ category: Python
 related_publications: false
 ---
 
-A single annual Trial Balance tells you where an account started and ended. It cannot tell you when something moved, or whether that movement was normal for that account. This project rebuilds the full monthly path for every balance sheet account in the Fake, Inc. general ledger and statistically flags the months worth asking about.
+If you're looking at a company's trial balance for the year, it can tell you where an account started and ended. It cannot tell you when something moved, or where exactly the account fell or jumped in value. The way accountants have typically solved this is by running monthly balance sheets, then saving these files in Excel, pulling the files up one after the other to find the movement in value. It's not a great use of time, and we spend a lot of time thinking "there has to be a better way." Well, there is. This project rebuilds the full monthly path for every balance sheet account in the Fake, Inc. general ledger and statistically flags the months worth asking about.
 
-The question this answers is not "does the balance sheet balance." It always should. The real question is: does every material movement have an explanation ready before someone asks.
+To be clear: the question this answers is not "does the balance sheet balance." It always should. The real question is, "does every material movement have an explanation?"
 
 ## How it works
 
-The notebook pulls the same Allocated Transactions and Chart of Accounts data behind the Excel model, builds a running monthly ending balance for every asset, liability, and equity account, computes month-over-month change, and flags any month where an account's movement exceeds 1.5 standard deviations from that account's own typical pattern.
+The notebook pulls the same general ledger transactions and Chart of Accounts data behind the Excel model, builds a running monthly ending balance for every asset, liability, and equity account, computes month-over-month change, and flags any month where an account's movement exceeds 1.5 standard deviations from that account's own typical pattern.
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
@@ -42,7 +42,7 @@ Fifteen flagged account-months out of 234 total, and every one traces to a real,
 
 ## The potential
 
-This kind of code can flag when balance sheet accounts change unexpectedly. It can also trace backward, checking when certain pledges were made and what might be at risk of becoming uncollectible. For accountants, this tool can help trace liability accounts that may have been building large balances without being properly expensed or reduced over time.
+This kind of code can flag when balance sheet accounts change unexpectedly. It can also trace the accounts backwards, checking when certain transactions were made in prior fiscal years. For example: a pledge for a donation more than five years back--which might be at risk of being uncollectible. For accountants, this tool can also help trace liability accounts that may have been building large balances without being properly expensed or reduced over time.
 
 ## View the code directly
 

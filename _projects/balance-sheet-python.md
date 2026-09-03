@@ -38,11 +38,11 @@ The notebook pulls the same general ledger transactions and Chart of Accounts da
 
 ## What it found
 
-Fifteen flagged account-months out of 234 total, and every one traces to a real, explainable event: an $18,500 equipment purchase, a $40,000 draw on a note payable, a $70,000 restricted grant recognized mid-year, a $25,000 deferred revenue release.
+Fifteen flagged account-months out of 234 total (all balance sheet accounts * 12), and every one traces to a real, explainable event: an $18,500 equipment purchase, a $40,000 draw on a note payable, a $70,000 restricted grant recognized mid-year, a $25,000 deferred revenue release. These all make great footnotes for the balance sheet at year-end, since these jumps in value count as anomalies. Board members and executives should know why these are here.
 
 ## The potential
 
-This kind of code can flag when balance sheet accounts change unexpectedly. It can also trace the accounts backwards, checking when certain transactions were made in prior fiscal years. For example: a pledge for a donation more than five years back--which might be at risk of being uncollectible. For accountants, this tool can also help trace liability accounts that may have been building large balances without being properly expensed or reduced over time.
+This kind of code flags when balance sheet accounts change unexpectedly. It could also be used to trace the accounts backwards, checking when certain transactions were made in prior fiscal years. For example: a pledge for a donation more than five years back--which might be at risk of being uncollectible. For accountants, this tool can also help trace liability accounts that may have been building large balances without being properly expensed or reduced over time.
 
 ## View the code directly
 

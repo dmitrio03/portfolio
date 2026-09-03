@@ -8,7 +8,7 @@ category: Python
 related_publications: false
 ---
 
-If you're looking at a company's trial balance for the year, it can tell you where an account started and ended. It cannot tell you when something moved, or where exactly the account fell or jumped in value. The way accountants have typically solved this is by running monthly balance sheets, then saving these files in Excel, pulling the files up one after the other to find the movement in value. It's not a great use of time, and we spend a lot of time thinking "there has to be a better way." Well, there is. This project rebuilds the full monthly path for every balance sheet account in the Fake, Inc. general ledger and statistically flags the months worth asking about.
+If you're looking at a company's trial balance for the year, it can tell you where an account started and ended. It cannot tell you when something moved, or where exactly the account fell or jumped in value. The way accountants have typically solved this is by running monthly balance sheets, saving the files in Excel, then pulling the files up one after the other to find the movement in value. It's not a great use of time, and we spend a lot of that time thinking "there has to be a better way." Well, there is. This project rebuilds the full monthly path for every balance sheet account in the Fake, Inc. general ledger and statistically flags the months worth asking about.
 
 To be clear: the question this answers is not "does the balance sheet balance." It always should. The real question is, "does every material movement have an explanation?"
 

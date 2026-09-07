@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "How Software Revenue Actually Gets Booked - Fake Telemedicine, Inc."
+title: "Revenue from Software Development - Beginning to End"
 description: "A plain-language walkthrough of ASC 606 revenue recognition, cost-to-cost accounting, and software capitalization for a technology company with both license and grant-funded development revenue"
 img: assets/img/software-revenue-cover.jpg
 importance: 4
@@ -8,13 +8,13 @@ category: Excel
 related_publications: false
 ---
 
-Most people who have never worked in finance assume revenue is simple: a client signs a contract, the company gets paid, that payment is the revenue. For a technology company like Fake Telemedicine, Inc., that assumption is wrong in almost every case, and the gap between "money received" and "revenue earned" is exactly where a lot of financial statements go wrong, and exactly where an accountant earns their keep.
+Most people who have never worked in finance assume revenue is simple: a client signs a contract, the company gets paid, that payment is the revenue. For a technology company that produces software, that assumption is wrong in almost every case. The gap between "money received" and "revenue earned" is where a lot of financial statements go wrong, and I'll try to explain why briefly (I know it's boring).
 
-This page walks through how Fake Telemedicine, Inc. actually recognizes revenue across its two very different business lines, why the accounting has to work this way under GAAP, and how the cost of building software flows through the balance sheet before it ever becomes a finished, income-generating asset. None of this is abstract theory. It is built from a real, working dataset, with real dollar figures, that you can see for yourself.
+This page walks through how Fake Telemedicine, Inc. actually recognizes revenue across its two very different business lines, why the accounting has to work this way under GAAP, and how the cost of building software flows through the balance sheet before it ever becomes a finished, proprietary asset. None of this is abstract theory. It is built from a real, working dataset, with real dollar figures, that you can see for yourself.
 
 ## The two ways this company earns money
 
-Fake Telemedicine, Inc. sells electronic health record software to two very different kinds of customers, and that difference matters enormously for how the accounting works.
+My example company, Fake Telemedicine, Inc. is a nonprofit healthcare software company with two income streams.
 
 **State and county health departments** pay for a **license** to use the platform. This is a subscription-style, hosted arrangement. The customer never owns the software or takes it home; they pay for ongoing access, support, and use, typically over a term of two to five years.
 
@@ -42,17 +42,21 @@ Both of these accounts exist for the same reason: to keep the income statement h
 
 ## Development revenue: recognized as work is completed, not as time passes
 
-This is the part of the accounting that is genuinely more complex, and it is where a purely time-based shortcut — dividing a contract by its number of months, the same way license revenue works — would be **the wrong method entirely**, even though it looks similar on the surface.
+This is the part of the accounting that is genuinely more complex, and it is where we need a purely time-based formula. Dividing a contract by its number of months, the same way license revenue works--this would be **the wrong method entirely**, even though it looks similar on the surface.
 
-A grant-funded software development project does not deliver value at a steady, predictable pace the way a hosted subscription does. Some months involve intense design and engineering work; others might be lighter, waiting on a partner's feedback or a compliance review. Recognizing revenue based purely on the calendar would completely disconnect the company's reported earnings from its actual progress. Under ASC 606, work performed "over time" — which most custom software development qualifies as — has to be measured using either an **input method** or an **output method**, and Fake Telemedicine, Inc. uses the input method known as **cost-to-cost**.
+Software development projects do not deliver value at a steady, predictable pace the way a hosted subscription does. Some months involve intense design and engineering work; others might be lighter, waiting on a partner's feedback or a compliance review. Recognizing revenue based purely on the calendar would completely disconnect the company's reported earnings from its actual progress. Under ASC 606, work performed "over time"--which most custom software development qualifies as--has to be measured using either an **input method** or an **output method**, and Fake Telemedicine, Inc. uses the input method known as **cost-to-cost**.
 
 The formula looks like this:
 
-**Percent Complete = Costs Incurred to Date ÷ Total Estimated Cost of the Project**
+$$
+\text{Percent Complete} = \frac{\text{Costs Incurred to Date}}{\text{Total Estimated Cost of the Project}}
+$$
 
 And once percent complete is known:
 
-**Revenue Recognized to Date = Contract Value × Percent Complete**
+$$
+\text{Revenue Recognized to Date} = \text{Contract Value} \times \text{Percent Complete}
+$$
 
 The entire calculation depends on one thing: knowing, with real accuracy, how much the project has actually cost to build so far. That number does not come from a spreadsheet estimate or a guess. It comes from the same kind of underlying records any accountant would recognize immediately.
 
@@ -107,8 +111,6 @@ The **income statement** shows revenue that reflects real, earned progress, whet
 Together, these choices are what make it possible to look at a single snapshot of the company's finances and trust that the numbers reflect what has actually happened, not just what cash has moved in or out of the bank account. That distinction, more than any other single idea, is the entire purpose of accrual-basis accounting under GAAP, and it is exactly why a technology company building custom software needs disciplined, well-documented cost accounting behind every dollar of revenue it claims to have earned.
 
 **A note on the data:** every contract, dollar figure, and company name in this dataset is fictional, built to demonstrate how these accounting mechanics actually work together in practice.
-
-## Download the full workbook
 
 <div class="text-center mt-3">
     <a href="{{ '/assets/jupyter/contracts_dataset.xlsx' | relative_url }}" class="btn btn-outline-primary" role="button">Download the full workbook (.xlsx)</a>

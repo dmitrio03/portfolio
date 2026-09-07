@@ -18,7 +18,7 @@ My example company, Fake Telemedicine, Inc. is a nonprofit healthcare software c
 
 **State and county health departments** pay for a **license** to use the platform. This is a subscription-style, hosted arrangement. The customer never owns the software or takes it home; they pay for ongoing access, support, and use, typically over a term of two to five years.
 
-**Foundations** — the Gates Foundation, the Dell Foundation, the Commonwealth Fund, and others in this dataset — pay to fund **new software development**. These are grants that fund the actual building of a specific product: a maternal health registry, an immunization tracking system, a behavioral health data exchange. The foundation is not paying for access to something that already exists. It is paying the company to build something that does not exist yet.
+**Foundations**--the Gates Foundation, the Dell Foundation, the Commonwealth Fund, and others in this dataset--pay to fund **new software development**. These are grants that fund the actual building of a specific product: a maternal health registry, an immunization tracking system, a behavioral health data exchange. The foundation is not paying for access to something that already exists. It is paying the company to build something that does not exist yet.
 
 Under the accounting standard that governs all of this, ASC 606, these two situations require two completely different recognition methods, and mixing them up would materially misstate the company's financial position.
 
@@ -92,11 +92,11 @@ As of this dataset's snapshot, the six capitalized products have accumulated **$
 
 ## Why this requires real collaboration, not just accounting discipline
 
-None of this works if the finance department is operating in isolation. The entire chain — from a signed contract, to logged development hours, to a percent-complete calculation, to recognized revenue, to a fully capitalized asset, to a depreciation schedule — depends on information that lives in at least two other departments entirely.
+None of this works if the finance department is operating in isolation. The entire chain--starting with a signed contract, to logged development hours, to a percent-complete calculation, to recognized revenue, to a fully capitalized asset, to a depreciation schedule--depends on information that lives in at least two other departments entirely.
 
 **Business development** owns the contract information: what was signed, for how much, with what terms, and what the client actually expects to receive. Without accurate, timely contract data flowing from business development into the accounting records, there is no reliable revenue figure to recognize in the first place.
 
-**Software development and engineering** own the ground truth of project progress: how much time has actually been spent, what has genuinely been completed, and — critically — the moment a product is actually finished and ready to be placed into service. If engineering does not clearly communicate when a project has crossed the finish line, the accounting team has no way of knowing when to move a project out of Construction in Progress and start depreciating it, and the company's balance sheet will not reflect economic reality.
+**Software development and engineering** own the ground truth of project progress: how much time has actually been spent, what has genuinely been completed, and (most importantly) the moment a product is actually finished and ready to be placed into service. If engineering does not clearly communicate when a project has crossed the finish line, the accounting team has no way of knowing when to move a project out of Construction in Progress and start depreciating it, and the company's balance sheet will not reflect economic reality.
 
 This is not a minor administrative detail. A technology company where finance, business development, and engineering do not talk to each other regularly and precisely will, almost inevitably, end up with financial statements that either overstate revenue by recognizing progress that never really happened, or understate it by sitting on completed, valuable assets that never get properly capitalized and put to use in the company's reporting. Strong cross-department collaboration is not a nice-to-have here. It is the mechanism that makes accurate financial statements possible at all.
 

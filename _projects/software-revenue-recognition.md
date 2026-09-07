@@ -107,3 +107,9 @@ The **income statement** shows revenue that reflects real, earned progress, whet
 Together, these choices are what make it possible to look at a single snapshot of the company's finances and trust that the numbers reflect what has actually happened, not just what cash has moved in or out of the bank account. That distinction, more than any other single idea, is the entire purpose of accrual-basis accounting under GAAP, and it is exactly why a technology company building custom software needs disciplined, well-documented cost accounting behind every dollar of revenue it claims to have earned.
 
 **A note on the data:** every contract, dollar figure, and company name in this dataset is fictional, built to demonstrate how these accounting mechanics actually work together in practice.
+
+## Download the full workbook
+
+<div class="text-center mt-3">
+    <a href="{{ '/assets/jupyter/contracts_dataset.xlsx' | relative_url }}" class="btn btn-outline-primary" role="button">Download the full workbook (.xlsx)</a>
+</div>

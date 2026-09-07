@@ -2,7 +2,7 @@
 layout: page
 title: "How Software Revenue Actually Gets Booked - Fake Telemedicine, Inc."
 description: "A plain-language walkthrough of ASC 606 revenue recognition, cost-to-cost accounting, and software capitalization for a technology company with both license and grant-funded development revenue"
-img: assets/img/software-revenue-cover.png
+img: assets/img/software-revenue-cover.jpg
 importance: 4
 category: Excel
 related_publications: false

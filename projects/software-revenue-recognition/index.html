@@ -1,0 +1,511 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> How Software Revenue Actually Gets Booked - Fake Telemedicine, Inc. | Dean C. McClure </title> <meta name="author" content="Dean C. McClure"> <meta name="description" content="A plain-language walkthrough of ASC 606 revenue recognition, cost-to-cost accounting, and software capitalization for a technology company with both license and grant-funded development revenue"> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%A7%A9&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://deanmcclure.page/projects/software-revenue-recognition/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Dean</span> C. McClure </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">How Software Revenue Actually Gets Booked - Fake Telemedicine, Inc.</h1> <p class="post-description">A plain-language walkthrough of ASC 606 revenue recognition, cost-to-cost accounting, and software capitalization for a technology company with both license and grant-funded development revenue</p> </header> <article> <p>Most people who have never worked in finance assume revenue is simple: a client signs a contract, the company gets paid, that payment is the revenue. For a technology company like Fake Telemedicine, Inc., that assumption is wrong in almost every case, and the gap between “money received” and “revenue earned” is exactly where a lot of financial statements go wrong, and exactly where an accountant earns their keep.</p> <p>This page walks through how Fake Telemedicine, Inc. actually recognizes revenue across its two very different business lines, why the accounting has to work this way under GAAP, and how the cost of building software flows through the balance sheet before it ever becomes a finished, income-generating asset. None of this is abstract theory. It is built from a real, working dataset, with real dollar figures, that you can see for yourself.</p> <h2 id="the-two-ways-this-company-earns-money">The two ways this company earns money</h2> <p>Fake Telemedicine, Inc. sells electronic health record software to two very different kinds of customers, and that difference matters enormously for how the accounting works.</p> <p><strong>State and county health departments</strong> pay for a <strong>license</strong> to use the platform. This is a subscription-style, hosted arrangement. The customer never owns the software or takes it home; they pay for ongoing access, support, and use, typically over a term of two to five years.</p> <p><strong>Foundations</strong> — the Gates Foundation, the Dell Foundation, the Commonwealth Fund, and others in this dataset — pay to fund <strong>new software development</strong>. These are grants that fund the actual building of a specific product: a maternal health registry, an immunization tracking system, a behavioral health data exchange. The foundation is not paying for access to something that already exists. It is paying the company to build something that does not exist yet.</p> <p>Under the accounting standard that governs all of this, ASC 606, these two situations require two completely different recognition methods, and mixing them up would materially misstate the company’s financial position.</p> <h2 id="license-revenue-recognized-over-time-straight-line">License revenue: recognized over time, straight-line</h2> <p>When a state health department signs a five-year license, the company does not book the entire contract value as revenue the day the contract is signed, and it also does not wait until year five to book anything. Instead, revenue is recognized <strong>ratably, month by month, over the life of the contract</strong>, because the company is providing continuous access and continuous value the entire time the contract is active.</p> <p>The math is simple in concept: divide the total contract value by the number of months in the term, and recognize that amount every month the contract is in force. If a five-year license is worth $600,000, the company recognizes $10,000 of revenue every single month, regardless of when or how often the customer is actually billed.</p> <p>That last point is important, because it creates a second, separate question: when does the company actually invoice the customer, and what happens to the gap between what has been billed and what has been earned?</p> <h2 id="why-deferred-revenue-and-accrued-income-exist">Why deferred revenue and accrued income exist</h2> <p>Billing and earning almost never happen on the same schedule, and this is the single most misunderstood part of software accounting for people without a finance background.</p> <p>If a health department pays its entire first year of license fees upfront — a very common government billing practice — the company has now <strong>received cash for work it has not yet fully performed</strong>. Under GAAP, that cash cannot be counted as revenue yet. It sits on the balance sheet as a liability called <strong>Deferred Revenue</strong>, because the company technically owes the customer twelve months of service in exchange for that payment. Each month, as the company actually delivers that access, a portion of the deferred revenue balance converts into real, recognized revenue.</p> <p>The opposite situation also happens, more often on the development side. If the company has done real, billable work — developers have written code, cloud infrastructure has been used, a milestone has genuinely been achieved — but has not yet sent an invoice for it, that earned-but-unbilled value sits on the balance sheet as an asset called <strong>Accrued Income</strong>. The company has done the work and is owed the money; it just has not gotten around to billing for it yet.</p> <p>Both of these accounts exist for the same reason: to keep the income statement honest about what was actually earned in a given period, completely separate from the timing of cash changing hands. A company that only tracked cash received would show wildly distorted, lumpy revenue every time a big invoice landed, even in months where very little new work actually happened.</p> <h2 id="development-revenue-recognized-as-work-is-completed-not-as-time-passes">Development revenue: recognized as work is completed, not as time passes</h2> <p>This is the part of the accounting that is genuinely more complex, and it is where a purely time-based shortcut — dividing a contract by its number of months, the same way license revenue works — would be <strong>the wrong method entirely</strong>, even though it looks similar on the surface.</p> <p>A grant-funded software development project does not deliver value at a steady, predictable pace the way a hosted subscription does. Some months involve intense design and engineering work; others might be lighter, waiting on a partner’s feedback or a compliance review. Recognizing revenue based purely on the calendar would completely disconnect the company’s reported earnings from its actual progress. Under ASC 606, work performed “over time” — which most custom software development qualifies as — has to be measured using either an <strong>input method</strong> or an <strong>output method</strong>, and Fake Telemedicine, Inc. uses the input method known as <strong>cost-to-cost</strong>.</p> <p>The formula looks like this:</p> <p><strong>Percent Complete = Costs Incurred to Date ÷ Total Estimated Cost of the Project</strong></p> <p>And once percent complete is known:</p> <p><strong>Revenue Recognized to Date = Contract Value × Percent Complete</strong></p> <p>The entire calculation depends on one thing: knowing, with real accuracy, how much the project has actually cost to build so far. That number does not come from a spreadsheet estimate or a guess. It comes from the same kind of underlying records any accountant would recognize immediately.</p> <h2 id="what-actually-goes-into-costs-incurred">What actually goes into “Costs Incurred”</h2> <p>This is the piece that people with no accounting background almost never think about, and it is the entire foundation the revenue recognition above depends on.</p> <p><strong>Time and effort.</strong> Every developer, designer, and engineer working on a specific grant-funded project logs their time against that project. Their hours, multiplied by their fully-loaded cost to the company (salary, benefits, payroll taxes), become a real dollar cost tied to that specific piece of software — not a general company expense, but a cost that belongs to one contract.</p> <p><strong>Cloud computing and infrastructure.</strong> Development and testing environments cost real money to run, and a company building several different products at once needs to know how much of its cloud bill belongs to each individual project, not just its infrastructure spending as a whole.</p> <p><strong>Vendor and contractor invoices.</strong> If the company brings in a specialized contractor for a piece of the interoperability module, or pays a third-party vendor for a licensed component used in the build, that invoice gets coded to the specific project it supports.</p> <p>All of these costs accumulate in a holding account on the balance sheet called <strong>Construction in Progress</strong>, the software-industry equivalent of the account a construction company would use to track a building that is not finished yet. As of this dataset’s snapshot date, Fake Telemedicine, Inc. has <strong>$2,990,668.44</strong> sitting in this account, spread across twenty-three active development projects at varying stages of completion. None of that has become a finished asset yet. It is money spent, tracked carefully, waiting for the underlying software to be finished.</p> <h2 id="when-the-software-is-not-real-work-the-accounting-falls-apart">When the software is not real work, the accounting falls apart</h2> <p>This is worth stating plainly, because it is the single biggest risk in this whole area of accounting: if a company cannot actually show, with real timesheets, real invoices, and a real cost ledger, how much has been spent on a specific project, it has no defensible basis for claiming any particular percentage of completion. An auditor reviewing this kind of revenue would ask, directly, for the underlying cost detail behind every percent-complete figure on the books. A number that cannot be traced back to real labor hours, real cloud bills, and real vendor invoices is not a number that should be on the financial statements at all. This is exactly why strong, disciplined cost tracking is not a bureaucratic afterthought for a software company. It is the entire legal and financial basis for recognizing a large share of its revenue.</p> <h2 id="from-construction-in-progress-to-a-real-asset">From Construction in Progress to a real asset</h2> <p>Once a development project reaches 100 percent complete — meaning the accumulated costs incurred equal the total estimated cost of the build — the software is finished and ready to be used commercially. At that point, its full accumulated cost moves out of Construction in Progress and into a new account: <strong>Capitalized Software</strong>.</p> <p>Six projects in this dataset have reached that point, moving a combined <strong>$1,491,717.09</strong> out of the in-progress account and into a finished, capitalized software asset. This is not a minor bookkeeping shuffle. It represents a real, meaningful shift in what those dollars mean on the balance sheet: they are no longer “money spent building something,” they are now “a completed asset the company owns and can generate revenue from going forward,” matching the products already generating grant revenue and, in some cases, ready to be offered as a licensable product to future customers.</p> <h2 id="depreciation-how-a-finished-software-asset-loses-value-over-time">Depreciation: how a finished software asset loses value over time</h2> <p>Once software is capitalized, its cost does not sit on the books forever at full value. Like a piece of equipment or a vehicle, it is expected to become less valuable and eventually obsolete as technology moves forward, and GAAP requires that decline to be recognized gradually, not all at once.</p> <p>Fake Telemedicine, Inc. depreciates (more precisely, amortizes, since this is an intangible asset rather than a physical one) its capitalized software on a <strong>straight-line basis over a five-year useful life</strong>. That means each project’s capitalized cost is divided evenly across sixty months, and that same amount is recognized as an expense every single month, starting from the date the software was placed into service.</p> <p>As of this dataset’s snapshot, the six capitalized products have accumulated <strong>$193,947.11</strong> in amortization against their combined $1,491,717.09 in original cost, leaving a <strong>net book value of $1,297,769.98</strong> still on the books. Every month going forward, that net book value declines a little further, and a corresponding amortization expense reduces the company’s reported profit, even though no new cash is changing hands. This is one of the clearest examples in all of accounting of a rule that exists specifically to prevent a company’s reported profitability from being misleading: the cost of building the software was real and already spent, and GAAP requires that cost to be matched against the revenue it helps generate over its useful life, not dumped entirely into the year it was built.</p> <h2 id="why-this-requires-real-collaboration-not-just-accounting-discipline">Why this requires real collaboration, not just accounting discipline</h2> <p>None of this works if the finance department is operating in isolation. The entire chain — from a signed contract, to logged development hours, to a percent-complete calculation, to recognized revenue, to a fully capitalized asset, to a depreciation schedule — depends on information that lives in at least two other departments entirely.</p> <p><strong>Business development</strong> owns the contract information: what was signed, for how much, with what terms, and what the client actually expects to receive. Without accurate, timely contract data flowing from business development into the accounting records, there is no reliable revenue figure to recognize in the first place.</p> <p><strong>Software development and engineering</strong> own the ground truth of project progress: how much time has actually been spent, what has genuinely been completed, and — critically — the moment a product is actually finished and ready to be placed into service. If engineering does not clearly communicate when a project has crossed the finish line, the accounting team has no way of knowing when to move a project out of Construction in Progress and start depreciating it, and the company’s balance sheet will not reflect economic reality.</p> <p>This is not a minor administrative detail. A technology company where finance, business development, and engineering do not talk to each other regularly and precisely will, almost inevitably, end up with financial statements that either overstate revenue by recognizing progress that never really happened, or understate it by sitting on completed, valuable assets that never get properly capitalized and put to use in the company’s reporting. Strong cross-department collaboration is not a nice-to-have here. It is the mechanism that makes accurate financial statements possible at all.</p> <h2 id="what-this-means-for-the-balance-sheet-and-the-bottom-line">What this means for the balance sheet and the bottom line</h2> <p>Pulling all of this together, here is what a reader of Fake Telemedicine, Inc.’s financial statements would actually see, and why each piece matters:</p> <p>The <strong>balance sheet</strong> shows real assets that represent genuine, tracked investment: money spent on software still being built, sitting separately from money spent on software that is finished and generating value. It also shows real liabilities and near-cash assets, like deferred revenue and accrued income, that keep the timing of cash flow honest and separate from the timing of value actually delivered.</p> <p>The <strong>income statement</strong> shows revenue that reflects real, earned progress, whether that progress is measured by time elapsed on a license or by actual cost incurred on a development project, alongside a steady, predictable amortization expense that spreads the cost of past software investment across the years that asset will actually be useful.</p> <p>Together, these choices are what make it possible to look at a single snapshot of the company’s finances and trust that the numbers reflect what has actually happened, not just what cash has moved in or out of the bank account. That distinction, more than any other single idea, is the entire purpose of accrual-basis accounting under GAAP, and it is exactly why a technology company building custom software needs disciplined, well-documented cost accounting behind every dollar of revenue it claims to have earned.</p> <p><strong>A note on the data:</strong> every contract, dollar figure, and company name in this dataset is fictional, built to demonstrate how these accounting mechanics actually work together in practice.</p> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Dean C. McClure. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3T6HN3SRK"></script> <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    window.dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-Z3T6HN3SRK");
+</script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-projects",
+          title: "projects",
+          description: "Growing collection of my projects.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-repositories",
+          title: "repositories",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/repositories/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "post-a-post-with-marimo-snippets",
+        
+          title: "a post with marimo snippets",
+        
+        description: "running Python in the browser with marimo",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/marimo/";
+          
+        },
+      },{id: "post-a-post-with-plotly-js",
+        
+          title: "a post with plotly.js",
+        
+        description: "this is what included plotly.js code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/plotly/";
+          
+        },
+      },{id: "post-a-post-with-image-galleries",
+        
+          title: "a post with image galleries",
+        
+        description: "this is what included image galleries could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/photo-gallery/";
+          
+        },
+      },{id: "post-a-post-with-tabs",
+        
+          title: "a post with tabs",
+        
+        description: "this is what included tabs in a post could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/tabs/";
+          
+        },
+      },{id: "post-a-post-with-typograms",
+        
+          title: "a post with typograms",
+        
+        description: "this is what included typograms code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/typograms/";
+          
+        },
+      },{id: "post-a-post-that-can-be-cited",
+        
+          title: "a post that can be cited",
+        
+        description: "this is what a post that can be cited looks like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/post-citation/";
+          
+        },
+      },{id: "post-a-post-with-pseudo-code",
+        
+          title: "a post with pseudo code",
+        
+        description: "this is what included pseudo code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/pseudocode/";
+          
+        },
+      },{id: "post-a-post-with-code-diff",
+        
+          title: "a post with code diff",
+        
+        description: "this is how you can display code diffs",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/code-diff/";
+          
+        },
+      },{id: "post-a-post-with-advanced-image-components",
+        
+          title: "a post with advanced image components",
+        
+        description: "this is what advanced image components could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/advanced-images/";
+          
+        },
+      },{id: "post-a-post-with-vega-lite",
+        
+          title: "a post with vega lite",
+        
+        description: "this is what included vega lite code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/vega-lite/";
+          
+        },
+      },{id: "post-a-post-with-geojson",
+        
+          title: "a post with geojson",
+        
+        description: "this is what included geojson code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/geojson-map/";
+          
+        },
+      },{id: "post-a-post-with-echarts",
+        
+          title: "a post with echarts",
+        
+        description: "this is what included echarts code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/echarts/";
+          
+        },
+      },{id: "post-a-post-with-chart-js",
+        
+          title: "a post with chart.js",
+        
+        description: "this is what included chart.js code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/chartjs/";
+          
+        },
+      },{id: "post-a-post-with-tikzjax",
+        
+          title: "a post with TikZJax",
+        
+        description: "this is what included TikZ code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/tikzjax/";
+          
+        },
+      },{id: "post-a-post-with-bibliography",
+        
+          title: "a post with bibliography",
+        
+        description: "an example of a blog post with bibliography",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/post-bibliography/";
+          
+        },
+      },{id: "post-a-post-with-jupyter-notebook",
+        
+          title: "a post with jupyter notebook",
+        
+        description: "an example of a blog post with jupyter notebook",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/jupyter-notebook/";
+          
+        },
+      },{id: "post-a-post-with-custom-blockquotes",
+        
+          title: "a post with custom blockquotes",
+        
+        description: "an example of a blog post with custom blockquotes",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/custom-blockquotes/";
+          
+        },
+      },{id: "post-a-post-with-table-of-contents-on-a-sidebar",
+        
+          title: "a post with table of contents on a sidebar",
+        
+        description: "an example of a blog post with table of contents on a sidebar",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/sidebar-table-of-contents/";
+          
+        },
+      },{id: "post-a-post-with-audios",
+        
+          title: "a post with audios",
+        
+        description: "this is what included audios could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/audios/";
+          
+        },
+      },{id: "post-a-post-with-videos",
+        
+          title: "a post with videos",
+        
+        description: "this is what included videos could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/videos/";
+          
+        },
+      },{id: "post-displaying-beautiful-interactive-tables",
+        
+          title: "displaying beautiful interactive tables",
+        
+        description: "an example of how to use interactive tables in al-folio",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/tables/";
+          
+        },
+      },{id: "post-a-post-with-table-of-contents",
+        
+          title: "a post with table of contents",
+        
+        description: "an example of a blog post with table of contents",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/table-of-contents/";
+          
+        },
+      },{id: "post-a-post-with-giscus-comments",
+        
+          title: "a post with giscus comments",
+        
+        description: "an example of a blog post with giscus comments",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/giscus-comments/";
+          
+        },
+      },{id: "post-یک-نوشتهٔ-راست-چین",
+        
+          title: "یک نوشتهٔ راست‌چین",
+        
+        description: "نمونه‌ای از پشتیبانی زبان‌های راست‌چین",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/rtl/";
+          
+        },
+      },{id: "post-a-post-with-redirect",
+        
+          title: "a post with redirect",
+        
+        description: "you can also redirect to assets like pdf",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/assets/pdf/example_pdf.pdf";
+          
+        },
+      },{id: "post-a-post-with-diagrams",
+        
+          title: "a post with diagrams",
+        
+        description: "an example of a blog post with diagrams",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/diagrams/";
+          
+        },
+      },{id: "post-a-distill-style-blog-post",
+        
+          title: "a distill-style blog post",
+        
+        description: "an example of a distill-style blog post and main elements",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/distill/";
+          
+        },
+      },{id: "post-a-post-with-twitter",
+        
+          title: "a post with twitter",
+        
+        description: "an example of a blog post with twitter",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/twitter/";
+          
+        },
+      },{id: "post-a-post-with-disqus-comments",
+        
+          title: "a post with disqus comments",
+        
+        description: "an example of a blog post with disqus comments",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/disqus-comments/";
+          
+        },
+      },{id: "post-a-post-with-math",
+        
+          title: "a post with math",
+        
+        description: "an example of a blog post with some math",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/math/";
+          
+        },
+      },{id: "post-a-post-with-code",
+        
+          title: "a post with code",
+        
+        description: "an example of a blog post with some code",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/code/";
+          
+        },
+      },{id: "post-a-post-with-images",
+        
+          title: "a post with images",
+        
+        description: "this is what included images could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/images/";
+          
+        },
+      },{id: "post-a-post-with-formatting-and-links",
+        
+          title: "a post with formatting and links",
+        
+        description: "march & april, looking forward to summer",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/formatting-and-links/";
+          
+        },
+      },{id: "books-the-godfather",
+          title: 'The Godfather',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_godfather/";
+            },},{id: "news-a-simple-inline-announcement",
+          title: 'A simple inline announcement.',
+          description: "",
+          section: "News",},{id: "news-a-long-announcement-with-details",
+          title: 'A long announcement with details',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_2/";
+            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
+          title: 'A simple inline announcement with Markdown emoji! <img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20"> <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20">',
+          description: "",
+          section: "News",},{id: "projects-balance-sheet-variance-analysis-python",
+          title: 'Balance Sheet Variance Analysis - Python',
+          description: "A month-over-month statistical variance analysis of every balance sheet account, built in pandas and Plotly on the Fake, Inc. general ledger",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/balance-sheet-python/";
+            },},{id: "projects-fake-inc-a-complete-nonprofit-financial-model",
+          title: 'Fake, Inc. — A Complete Nonprofit Financial Model',
+          description: "A full-year, GAAP-compliant fictional accounting workbook built to demonstrate how I think, reconcile, and communicate as an accountant",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/fake-inc-excel-company/";
+            },},{id: "projects-financial-dashboard-power-bi",
+          title: 'Financial Dashboard - Power BI',
+          description: "An interactive Power BI dashboard built on Fake, Inc.'s general ledger, comparing budget to actual by fiscal quarter across cost centers",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/fake_inc_dashboard/";
+            },},{id: "projects-how-software-revenue-actually-gets-booked-fake-telemedicine-inc",
+          title: 'How Software Revenue Actually Gets Booked - Fake Telemedicine, Inc.',
+          description: "A plain-language walkthrough of ASC 606 revenue recognition, cost-to-cost accounting, and software capitalization for a technology company with both license and grant-funded development revenue",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/software-revenue-recognition/";
+            },},{id: "teachings-data-science-fundamentals",
+          title: 'Data Science Fundamentals',
+          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/data-science-fundamentals/";
+            },},{id: "teachings-introduction-to-machine-learning",
+          title: 'Introduction to Machine Learning',
+          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/introduction-to-machine-learning/";
+            },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/Dean%20McClure%20resume3.pdf", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/deanmcclure", "_blank");
+        },
+      },{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%69%6E%66%6F@%64%65%61%6E%6D%63%63%6C%75%65.%70%61%67%65", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>

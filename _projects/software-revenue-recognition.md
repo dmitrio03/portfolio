@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: "Revenue from Software Development - Beginning to End"
 description: "A plain-language walkthrough of ASC 606 revenue recognition, cost-to-cost accounting, and software capitalization for a technology company with both license and grant-funded development revenue"
 img: assets/img/software-revenue-cover.jpg

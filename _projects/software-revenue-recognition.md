@@ -5,7 +5,7 @@ description: "A plain-language walkthrough of ASC 606 revenue recognition, cost-
 img: assets/img/software-revenue-cover.jpg
 importance: 4
 category: Excel
-maths: true
+enable_math: true
 related_publications: false
 ---
 

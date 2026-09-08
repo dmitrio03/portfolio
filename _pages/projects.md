@@ -4,6 +4,7 @@ title: projects
 permalink: /projects/
 description: Growing collection of my projects.
 nav: true
+mathjax: true
 nav_order: 3
 display_categories: [Excel, PowerBI, Python]
 horizontal: false
